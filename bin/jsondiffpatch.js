@@ -25,3 +25,9 @@ var dataNew = JSON.parse(fs.readFileSync(file2));
 
 var delta = jsondiffpatch.diff(dataOrig, dataNew);
 console.log(jsondiffpatch.console.diffToText(dataOrig, dataNew, delta, hideUnchanged));
+
+if (typeof delta === 'undefined') {
+    process.exit(0);  // No differences
+} else {
+    process.exit(1);
+}
