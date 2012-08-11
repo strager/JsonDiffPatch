@@ -7,7 +7,7 @@
     "Benjamin Eidelman <beneidel@gmail.com>"
   ],
   "bin": {
-    "jsondiffpatch": "./bin/jsondiffpatch"
+    "jsondiffpatch": "./bin/jsondiffpatch.js"
   },
   "scripts": {
     "test": "qunit -c ./src/jsondiffpatch.js -d jsondiffpatch:./src/jsondiffpatch -t ./test/test.js",
@@ -32,7 +32,9 @@
   "engine": {
     "node": ">=0.4"
   },
-  "dependencies": {},
+  "dependencies": {
+    "cli-color": "0.1.7"
+  },
   "optionalDependencies": {},
   "engines": {
     "node": "*"
